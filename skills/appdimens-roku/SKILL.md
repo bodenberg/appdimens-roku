@@ -38,3 +38,12 @@ Only when the project declares `customStrategies` (or the user asks for their ow
 
 `npm test` (brs-engine: parity, tokens, modes, custom fixture, SceneGraph example with `fhd` and `hd,fhd`) and
 `npx bsc --project bsconfig.json`; on a device, sideload `build/hello.zip` from `sh tools/build_example.sh`.
+
+<!-- appdimens-family:begin -->
+## Other AppDimens platforms
+
+The same token names and math exist on Android (Compose, Views, XML), Kotlin Multiplatform, iOS/macOS, Flutter, React
+Native, Web, .NET, Qt, GTK, LVGL, Roku, Python/Blender and games (Unity, Unreal, Godot, C/C++). For code on another
+platform, use that library's skill — every skill, plus the layout-intent decision table, installs with
+`npx appdimens-skills` (https://github.com/bodenberg/appdimens-skills). Hub: https://github.com/bodenberg/appdimens.
+<!-- appdimens-family:end -->
