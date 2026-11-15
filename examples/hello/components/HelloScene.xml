@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="HelloScene" extends="Scene">
+  <!-- Copy source/AppDimens.brs and source/AppDimensTokens.brs into your channel's source/ -->
+  <script type="text/brightscript" uri="pkg:/source/AppDimens.brs" />
+  <script type="text/brightscript" uri="pkg:/source/AppDimensTokens.brs" />
+  <script type="text/brightscript" uri="HelloScene.brs" />
+  <interface>
+    <field id="ready" type="boolean" value="false" />
+    <field id="summary" type="string" />
+  </interface>
+  <children>
+    <Rectangle id="card" color="0x1D4ED8FF" />
+    <Label id="title" text="AppDimens on Roku" color="0xFFFFFFFF" />
+    <Label id="body" text="Sizes follow the coordinate space, safe zones and strategy you pick." color="0xE5E7EBFF" wrap="true" />
+  </children>
+</component>

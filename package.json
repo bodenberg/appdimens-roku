@@ -1,0 +1,17 @@
+{
+  "name": "appdimens-roku-dev",
+  "private": true,
+  "version": "3.2.0",
+  "description": "Development tooling for appdimens-roku (tests in brs-engine, BrighterScript validation).",
+  "type": "module",
+  "scripts": {
+    "test": "node tests/run.mjs",
+    "lint": "bsc --project bsconfig.json",
+    "check": "python3 tools/gen_tokens.py --check && npm run lint && npm test"
+  },
+  "devDependencies": {
+    "brighterscript": "0.73.8",
+    "brs-node": "2.6.2"
+  },
+  "license": "Apache-2.0"
+}

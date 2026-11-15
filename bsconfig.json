@@ -1,0 +1,20 @@
+{
+  "rootDir": ".",
+  "files": [
+    "manifest",
+    "source/**/*.brs",
+    {
+      "src": "examples/hello/source/**/*",
+      "dest": "source"
+    },
+    {
+      "src": "examples/hello/components/**/*",
+      "dest": "components"
+    }
+  ],
+  "createPackage": false,
+  "retainStagingDir": false,
+  "stagingDir": "build/bsc-staging",
+  "diagnosticFilters": [],
+  "allowBrighterScriptInBrightScript": false
+}
