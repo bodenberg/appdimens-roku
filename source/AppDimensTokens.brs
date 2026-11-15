@@ -3027,3 +3027,1734 @@ function AppDimens__T_dwemia(v as float) as float
     if t = invalid then t = m.row(11)
     return v * t[11]
 end function
+
+' ── Global token functions, the AppDimens way (like sdp(16) on the Web / React Native) ──
+' sdp(720), asdp(24), ssp(14), logssp(28) … over AppDimens() (this device, cached per thread).
+
+function sdp(v as float) as float
+    return AppDimens().sdp(v)
+end function
+
+function sdpa(v as float) as float
+    return AppDimens().sdpa(v)
+end function
+
+function sdpi(v as float) as float
+    return AppDimens().sdpi(v)
+end function
+
+function sdpia(v as float) as float
+    return AppDimens().sdpia(v)
+end function
+
+function ssp(v as float) as float
+    return AppDimens().ssp(v)
+end function
+
+function sspa(v as float) as float
+    return AppDimens().sspa(v)
+end function
+
+function sspi(v as float) as float
+    return AppDimens().sspi(v)
+end function
+
+function sspia(v as float) as float
+    return AppDimens().sspia(v)
+end function
+
+function sem(v as float) as float
+    return AppDimens().sem(v)
+end function
+
+function sema(v as float) as float
+    return AppDimens().sema(v)
+end function
+
+function semi(v as float) as float
+    return AppDimens().semi(v)
+end function
+
+function semia(v as float) as float
+    return AppDimens().semia(v)
+end function
+
+function hdp(v as float) as float
+    return AppDimens().hdp(v)
+end function
+
+function hdpa(v as float) as float
+    return AppDimens().hdpa(v)
+end function
+
+function hdpi(v as float) as float
+    return AppDimens().hdpi(v)
+end function
+
+function hdpia(v as float) as float
+    return AppDimens().hdpia(v)
+end function
+
+function hsp(v as float) as float
+    return AppDimens().hsp(v)
+end function
+
+function hspa(v as float) as float
+    return AppDimens().hspa(v)
+end function
+
+function hspi(v as float) as float
+    return AppDimens().hspi(v)
+end function
+
+function hspia(v as float) as float
+    return AppDimens().hspia(v)
+end function
+
+function hem(v as float) as float
+    return AppDimens().hem(v)
+end function
+
+function hema(v as float) as float
+    return AppDimens().hema(v)
+end function
+
+function hemi(v as float) as float
+    return AppDimens().hemi(v)
+end function
+
+function hemia(v as float) as float
+    return AppDimens().hemia(v)
+end function
+
+function wdp(v as float) as float
+    return AppDimens().wdp(v)
+end function
+
+function wdpa(v as float) as float
+    return AppDimens().wdpa(v)
+end function
+
+function wdpi(v as float) as float
+    return AppDimens().wdpi(v)
+end function
+
+function wdpia(v as float) as float
+    return AppDimens().wdpia(v)
+end function
+
+function wsp(v as float) as float
+    return AppDimens().wsp(v)
+end function
+
+function wspa(v as float) as float
+    return AppDimens().wspa(v)
+end function
+
+function wspi(v as float) as float
+    return AppDimens().wspi(v)
+end function
+
+function wspia(v as float) as float
+    return AppDimens().wspia(v)
+end function
+
+function wem(v as float) as float
+    return AppDimens().wem(v)
+end function
+
+function wema(v as float) as float
+    return AppDimens().wema(v)
+end function
+
+function wemi(v as float) as float
+    return AppDimens().wemi(v)
+end function
+
+function wemia(v as float) as float
+    return AppDimens().wemia(v)
+end function
+
+function asdp(v as float) as float
+    return AppDimens().asdp(v)
+end function
+
+function asdpa(v as float) as float
+    return AppDimens().asdpa(v)
+end function
+
+function asdpi(v as float) as float
+    return AppDimens().asdpi(v)
+end function
+
+function asdpia(v as float) as float
+    return AppDimens().asdpia(v)
+end function
+
+function assp(v as float) as float
+    return AppDimens().assp(v)
+end function
+
+function asspa(v as float) as float
+    return AppDimens().asspa(v)
+end function
+
+function asspi(v as float) as float
+    return AppDimens().asspi(v)
+end function
+
+function asspia(v as float) as float
+    return AppDimens().asspia(v)
+end function
+
+function asem(v as float) as float
+    return AppDimens().asem(v)
+end function
+
+function asema(v as float) as float
+    return AppDimens().asema(v)
+end function
+
+function asemi(v as float) as float
+    return AppDimens().asemi(v)
+end function
+
+function asemia(v as float) as float
+    return AppDimens().asemia(v)
+end function
+
+function ahdp(v as float) as float
+    return AppDimens().ahdp(v)
+end function
+
+function ahdpa(v as float) as float
+    return AppDimens().ahdpa(v)
+end function
+
+function ahdpi(v as float) as float
+    return AppDimens().ahdpi(v)
+end function
+
+function ahdpia(v as float) as float
+    return AppDimens().ahdpia(v)
+end function
+
+function ahsp(v as float) as float
+    return AppDimens().ahsp(v)
+end function
+
+function ahspa(v as float) as float
+    return AppDimens().ahspa(v)
+end function
+
+function ahspi(v as float) as float
+    return AppDimens().ahspi(v)
+end function
+
+function ahspia(v as float) as float
+    return AppDimens().ahspia(v)
+end function
+
+function ahem(v as float) as float
+    return AppDimens().ahem(v)
+end function
+
+function ahema(v as float) as float
+    return AppDimens().ahema(v)
+end function
+
+function ahemi(v as float) as float
+    return AppDimens().ahemi(v)
+end function
+
+function ahemia(v as float) as float
+    return AppDimens().ahemia(v)
+end function
+
+function awdp(v as float) as float
+    return AppDimens().awdp(v)
+end function
+
+function awdpa(v as float) as float
+    return AppDimens().awdpa(v)
+end function
+
+function awdpi(v as float) as float
+    return AppDimens().awdpi(v)
+end function
+
+function awdpia(v as float) as float
+    return AppDimens().awdpia(v)
+end function
+
+function awsp(v as float) as float
+    return AppDimens().awsp(v)
+end function
+
+function awspa(v as float) as float
+    return AppDimens().awspa(v)
+end function
+
+function awspi(v as float) as float
+    return AppDimens().awspi(v)
+end function
+
+function awspia(v as float) as float
+    return AppDimens().awspia(v)
+end function
+
+function awem(v as float) as float
+    return AppDimens().awem(v)
+end function
+
+function awema(v as float) as float
+    return AppDimens().awema(v)
+end function
+
+function awemi(v as float) as float
+    return AppDimens().awemi(v)
+end function
+
+function awemia(v as float) as float
+    return AppDimens().awemia(v)
+end function
+
+function psdp(v as float) as float
+    return AppDimens().psdp(v)
+end function
+
+function psdpa(v as float) as float
+    return AppDimens().psdpa(v)
+end function
+
+function psdpi(v as float) as float
+    return AppDimens().psdpi(v)
+end function
+
+function psdpia(v as float) as float
+    return AppDimens().psdpia(v)
+end function
+
+function pssp(v as float) as float
+    return AppDimens().pssp(v)
+end function
+
+function psspa(v as float) as float
+    return AppDimens().psspa(v)
+end function
+
+function psspi(v as float) as float
+    return AppDimens().psspi(v)
+end function
+
+function psspia(v as float) as float
+    return AppDimens().psspia(v)
+end function
+
+function psem(v as float) as float
+    return AppDimens().psem(v)
+end function
+
+function psema(v as float) as float
+    return AppDimens().psema(v)
+end function
+
+function psemi(v as float) as float
+    return AppDimens().psemi(v)
+end function
+
+function psemia(v as float) as float
+    return AppDimens().psemia(v)
+end function
+
+function phdp(v as float) as float
+    return AppDimens().phdp(v)
+end function
+
+function phdpa(v as float) as float
+    return AppDimens().phdpa(v)
+end function
+
+function phdpi(v as float) as float
+    return AppDimens().phdpi(v)
+end function
+
+function phdpia(v as float) as float
+    return AppDimens().phdpia(v)
+end function
+
+function phsp(v as float) as float
+    return AppDimens().phsp(v)
+end function
+
+function phspa(v as float) as float
+    return AppDimens().phspa(v)
+end function
+
+function phspi(v as float) as float
+    return AppDimens().phspi(v)
+end function
+
+function phspia(v as float) as float
+    return AppDimens().phspia(v)
+end function
+
+function phem(v as float) as float
+    return AppDimens().phem(v)
+end function
+
+function phema(v as float) as float
+    return AppDimens().phema(v)
+end function
+
+function phemi(v as float) as float
+    return AppDimens().phemi(v)
+end function
+
+function phemia(v as float) as float
+    return AppDimens().phemia(v)
+end function
+
+function pwdp(v as float) as float
+    return AppDimens().pwdp(v)
+end function
+
+function pwdpa(v as float) as float
+    return AppDimens().pwdpa(v)
+end function
+
+function pwdpi(v as float) as float
+    return AppDimens().pwdpi(v)
+end function
+
+function pwdpia(v as float) as float
+    return AppDimens().pwdpia(v)
+end function
+
+function pwsp(v as float) as float
+    return AppDimens().pwsp(v)
+end function
+
+function pwspa(v as float) as float
+    return AppDimens().pwspa(v)
+end function
+
+function pwspi(v as float) as float
+    return AppDimens().pwspi(v)
+end function
+
+function pwspia(v as float) as float
+    return AppDimens().pwspia(v)
+end function
+
+function pwem(v as float) as float
+    return AppDimens().pwem(v)
+end function
+
+function pwema(v as float) as float
+    return AppDimens().pwema(v)
+end function
+
+function pwemi(v as float) as float
+    return AppDimens().pwemi(v)
+end function
+
+function pwemia(v as float) as float
+    return AppDimens().pwemia(v)
+end function
+
+function pwsdp(v as float) as float
+    return AppDimens().pwsdp(v)
+end function
+
+function pwsdpa(v as float) as float
+    return AppDimens().pwsdpa(v)
+end function
+
+function pwsdpi(v as float) as float
+    return AppDimens().pwsdpi(v)
+end function
+
+function pwsdpia(v as float) as float
+    return AppDimens().pwsdpia(v)
+end function
+
+function pwssp(v as float) as float
+    return AppDimens().pwssp(v)
+end function
+
+function pwsspa(v as float) as float
+    return AppDimens().pwsspa(v)
+end function
+
+function pwsspi(v as float) as float
+    return AppDimens().pwsspi(v)
+end function
+
+function pwsspia(v as float) as float
+    return AppDimens().pwsspia(v)
+end function
+
+function pwsem(v as float) as float
+    return AppDimens().pwsem(v)
+end function
+
+function pwsema(v as float) as float
+    return AppDimens().pwsema(v)
+end function
+
+function pwsemi(v as float) as float
+    return AppDimens().pwsemi(v)
+end function
+
+function pwsemia(v as float) as float
+    return AppDimens().pwsemia(v)
+end function
+
+function pwhdp(v as float) as float
+    return AppDimens().pwhdp(v)
+end function
+
+function pwhdpa(v as float) as float
+    return AppDimens().pwhdpa(v)
+end function
+
+function pwhdpi(v as float) as float
+    return AppDimens().pwhdpi(v)
+end function
+
+function pwhdpia(v as float) as float
+    return AppDimens().pwhdpia(v)
+end function
+
+function pwhsp(v as float) as float
+    return AppDimens().pwhsp(v)
+end function
+
+function pwhspa(v as float) as float
+    return AppDimens().pwhspa(v)
+end function
+
+function pwhspi(v as float) as float
+    return AppDimens().pwhspi(v)
+end function
+
+function pwhspia(v as float) as float
+    return AppDimens().pwhspia(v)
+end function
+
+function pwhem(v as float) as float
+    return AppDimens().pwhem(v)
+end function
+
+function pwhema(v as float) as float
+    return AppDimens().pwhema(v)
+end function
+
+function pwhemi(v as float) as float
+    return AppDimens().pwhemi(v)
+end function
+
+function pwhemia(v as float) as float
+    return AppDimens().pwhemia(v)
+end function
+
+function pwwdp(v as float) as float
+    return AppDimens().pwwdp(v)
+end function
+
+function pwwdpa(v as float) as float
+    return AppDimens().pwwdpa(v)
+end function
+
+function pwwdpi(v as float) as float
+    return AppDimens().pwwdpi(v)
+end function
+
+function pwwdpia(v as float) as float
+    return AppDimens().pwwdpia(v)
+end function
+
+function pwwsp(v as float) as float
+    return AppDimens().pwwsp(v)
+end function
+
+function pwwspa(v as float) as float
+    return AppDimens().pwwspa(v)
+end function
+
+function pwwspi(v as float) as float
+    return AppDimens().pwwspi(v)
+end function
+
+function pwwspia(v as float) as float
+    return AppDimens().pwwspia(v)
+end function
+
+function pwwem(v as float) as float
+    return AppDimens().pwwem(v)
+end function
+
+function pwwema(v as float) as float
+    return AppDimens().pwwema(v)
+end function
+
+function pwwemi(v as float) as float
+    return AppDimens().pwwemi(v)
+end function
+
+function pwwemia(v as float) as float
+    return AppDimens().pwwemia(v)
+end function
+
+function fsdp(v as float) as float
+    return AppDimens().fsdp(v)
+end function
+
+function fsdpa(v as float) as float
+    return AppDimens().fsdpa(v)
+end function
+
+function fsdpi(v as float) as float
+    return AppDimens().fsdpi(v)
+end function
+
+function fsdpia(v as float) as float
+    return AppDimens().fsdpia(v)
+end function
+
+function fssp(v as float) as float
+    return AppDimens().fssp(v)
+end function
+
+function fsspa(v as float) as float
+    return AppDimens().fsspa(v)
+end function
+
+function fsspi(v as float) as float
+    return AppDimens().fsspi(v)
+end function
+
+function fsspia(v as float) as float
+    return AppDimens().fsspia(v)
+end function
+
+function fsem(v as float) as float
+    return AppDimens().fsem(v)
+end function
+
+function fsema(v as float) as float
+    return AppDimens().fsema(v)
+end function
+
+function fsemi(v as float) as float
+    return AppDimens().fsemi(v)
+end function
+
+function fsemia(v as float) as float
+    return AppDimens().fsemia(v)
+end function
+
+function fhdp(v as float) as float
+    return AppDimens().fhdp(v)
+end function
+
+function fhdpa(v as float) as float
+    return AppDimens().fhdpa(v)
+end function
+
+function fhdpi(v as float) as float
+    return AppDimens().fhdpi(v)
+end function
+
+function fhdpia(v as float) as float
+    return AppDimens().fhdpia(v)
+end function
+
+function fhsp(v as float) as float
+    return AppDimens().fhsp(v)
+end function
+
+function fhspa(v as float) as float
+    return AppDimens().fhspa(v)
+end function
+
+function fhspi(v as float) as float
+    return AppDimens().fhspi(v)
+end function
+
+function fhspia(v as float) as float
+    return AppDimens().fhspia(v)
+end function
+
+function fhem(v as float) as float
+    return AppDimens().fhem(v)
+end function
+
+function fhema(v as float) as float
+    return AppDimens().fhema(v)
+end function
+
+function fhemi(v as float) as float
+    return AppDimens().fhemi(v)
+end function
+
+function fhemia(v as float) as float
+    return AppDimens().fhemia(v)
+end function
+
+function fwdp(v as float) as float
+    return AppDimens().fwdp(v)
+end function
+
+function fwdpa(v as float) as float
+    return AppDimens().fwdpa(v)
+end function
+
+function fwdpi(v as float) as float
+    return AppDimens().fwdpi(v)
+end function
+
+function fwdpia(v as float) as float
+    return AppDimens().fwdpia(v)
+end function
+
+function fwsp(v as float) as float
+    return AppDimens().fwsp(v)
+end function
+
+function fwspa(v as float) as float
+    return AppDimens().fwspa(v)
+end function
+
+function fwspi(v as float) as float
+    return AppDimens().fwspi(v)
+end function
+
+function fwspia(v as float) as float
+    return AppDimens().fwspia(v)
+end function
+
+function fwem(v as float) as float
+    return AppDimens().fwem(v)
+end function
+
+function fwema(v as float) as float
+    return AppDimens().fwema(v)
+end function
+
+function fwemi(v as float) as float
+    return AppDimens().fwemi(v)
+end function
+
+function fwemia(v as float) as float
+    return AppDimens().fwemia(v)
+end function
+
+function isdp(v as float) as float
+    return AppDimens().isdp(v)
+end function
+
+function isdpa(v as float) as float
+    return AppDimens().isdpa(v)
+end function
+
+function isdpi(v as float) as float
+    return AppDimens().isdpi(v)
+end function
+
+function isdpia(v as float) as float
+    return AppDimens().isdpia(v)
+end function
+
+function issp(v as float) as float
+    return AppDimens().issp(v)
+end function
+
+function isspa(v as float) as float
+    return AppDimens().isspa(v)
+end function
+
+function isspi(v as float) as float
+    return AppDimens().isspi(v)
+end function
+
+function isspia(v as float) as float
+    return AppDimens().isspia(v)
+end function
+
+function isem(v as float) as float
+    return AppDimens().isem(v)
+end function
+
+function isema(v as float) as float
+    return AppDimens().isema(v)
+end function
+
+function isemi(v as float) as float
+    return AppDimens().isemi(v)
+end function
+
+function isemia(v as float) as float
+    return AppDimens().isemia(v)
+end function
+
+function ihdp(v as float) as float
+    return AppDimens().ihdp(v)
+end function
+
+function ihdpa(v as float) as float
+    return AppDimens().ihdpa(v)
+end function
+
+function ihdpi(v as float) as float
+    return AppDimens().ihdpi(v)
+end function
+
+function ihdpia(v as float) as float
+    return AppDimens().ihdpia(v)
+end function
+
+function ihsp(v as float) as float
+    return AppDimens().ihsp(v)
+end function
+
+function ihspa(v as float) as float
+    return AppDimens().ihspa(v)
+end function
+
+function ihspi(v as float) as float
+    return AppDimens().ihspi(v)
+end function
+
+function ihspia(v as float) as float
+    return AppDimens().ihspia(v)
+end function
+
+function ihem(v as float) as float
+    return AppDimens().ihem(v)
+end function
+
+function ihema(v as float) as float
+    return AppDimens().ihema(v)
+end function
+
+function ihemi(v as float) as float
+    return AppDimens().ihemi(v)
+end function
+
+function ihemia(v as float) as float
+    return AppDimens().ihemia(v)
+end function
+
+function iwdp(v as float) as float
+    return AppDimens().iwdp(v)
+end function
+
+function iwdpa(v as float) as float
+    return AppDimens().iwdpa(v)
+end function
+
+function iwdpi(v as float) as float
+    return AppDimens().iwdpi(v)
+end function
+
+function iwdpia(v as float) as float
+    return AppDimens().iwdpia(v)
+end function
+
+function iwsp(v as float) as float
+    return AppDimens().iwsp(v)
+end function
+
+function iwspa(v as float) as float
+    return AppDimens().iwspa(v)
+end function
+
+function iwspi(v as float) as float
+    return AppDimens().iwspi(v)
+end function
+
+function iwspia(v as float) as float
+    return AppDimens().iwspia(v)
+end function
+
+function iwem(v as float) as float
+    return AppDimens().iwem(v)
+end function
+
+function iwema(v as float) as float
+    return AppDimens().iwema(v)
+end function
+
+function iwemi(v as float) as float
+    return AppDimens().iwemi(v)
+end function
+
+function iwemia(v as float) as float
+    return AppDimens().iwemia(v)
+end function
+
+function logsdp(v as float) as float
+    return AppDimens().logsdp(v)
+end function
+
+function logsdpa(v as float) as float
+    return AppDimens().logsdpa(v)
+end function
+
+function logsdpi(v as float) as float
+    return AppDimens().logsdpi(v)
+end function
+
+function logsdpia(v as float) as float
+    return AppDimens().logsdpia(v)
+end function
+
+function logssp(v as float) as float
+    return AppDimens().logssp(v)
+end function
+
+function logsspa(v as float) as float
+    return AppDimens().logsspa(v)
+end function
+
+function logsspi(v as float) as float
+    return AppDimens().logsspi(v)
+end function
+
+function logsspia(v as float) as float
+    return AppDimens().logsspia(v)
+end function
+
+function logsem(v as float) as float
+    return AppDimens().logsem(v)
+end function
+
+function logsema(v as float) as float
+    return AppDimens().logsema(v)
+end function
+
+function logsemi(v as float) as float
+    return AppDimens().logsemi(v)
+end function
+
+function logsemia(v as float) as float
+    return AppDimens().logsemia(v)
+end function
+
+function loghdp(v as float) as float
+    return AppDimens().loghdp(v)
+end function
+
+function loghdpa(v as float) as float
+    return AppDimens().loghdpa(v)
+end function
+
+function loghdpi(v as float) as float
+    return AppDimens().loghdpi(v)
+end function
+
+function loghdpia(v as float) as float
+    return AppDimens().loghdpia(v)
+end function
+
+function loghsp(v as float) as float
+    return AppDimens().loghsp(v)
+end function
+
+function loghspa(v as float) as float
+    return AppDimens().loghspa(v)
+end function
+
+function loghspi(v as float) as float
+    return AppDimens().loghspi(v)
+end function
+
+function loghspia(v as float) as float
+    return AppDimens().loghspia(v)
+end function
+
+function loghem(v as float) as float
+    return AppDimens().loghem(v)
+end function
+
+function loghema(v as float) as float
+    return AppDimens().loghema(v)
+end function
+
+function loghemi(v as float) as float
+    return AppDimens().loghemi(v)
+end function
+
+function loghemia(v as float) as float
+    return AppDimens().loghemia(v)
+end function
+
+function logwdp(v as float) as float
+    return AppDimens().logwdp(v)
+end function
+
+function logwdpa(v as float) as float
+    return AppDimens().logwdpa(v)
+end function
+
+function logwdpi(v as float) as float
+    return AppDimens().logwdpi(v)
+end function
+
+function logwdpia(v as float) as float
+    return AppDimens().logwdpia(v)
+end function
+
+function logwsp(v as float) as float
+    return AppDimens().logwsp(v)
+end function
+
+function logwspa(v as float) as float
+    return AppDimens().logwspa(v)
+end function
+
+function logwspi(v as float) as float
+    return AppDimens().logwspi(v)
+end function
+
+function logwspia(v as float) as float
+    return AppDimens().logwspia(v)
+end function
+
+function logwem(v as float) as float
+    return AppDimens().logwem(v)
+end function
+
+function logwema(v as float) as float
+    return AppDimens().logwema(v)
+end function
+
+function logwemi(v as float) as float
+    return AppDimens().logwemi(v)
+end function
+
+function logwemia(v as float) as float
+    return AppDimens().logwemia(v)
+end function
+
+function dgsdp(v as float) as float
+    return AppDimens().dgsdp(v)
+end function
+
+function dgsdpa(v as float) as float
+    return AppDimens().dgsdpa(v)
+end function
+
+function dgsdpi(v as float) as float
+    return AppDimens().dgsdpi(v)
+end function
+
+function dgsdpia(v as float) as float
+    return AppDimens().dgsdpia(v)
+end function
+
+function dgssp(v as float) as float
+    return AppDimens().dgssp(v)
+end function
+
+function dgsspa(v as float) as float
+    return AppDimens().dgsspa(v)
+end function
+
+function dgsspi(v as float) as float
+    return AppDimens().dgsspi(v)
+end function
+
+function dgsspia(v as float) as float
+    return AppDimens().dgsspia(v)
+end function
+
+function dgsem(v as float) as float
+    return AppDimens().dgsem(v)
+end function
+
+function dgsema(v as float) as float
+    return AppDimens().dgsema(v)
+end function
+
+function dgsemi(v as float) as float
+    return AppDimens().dgsemi(v)
+end function
+
+function dgsemia(v as float) as float
+    return AppDimens().dgsemia(v)
+end function
+
+function dghdp(v as float) as float
+    return AppDimens().dghdp(v)
+end function
+
+function dghdpa(v as float) as float
+    return AppDimens().dghdpa(v)
+end function
+
+function dghdpi(v as float) as float
+    return AppDimens().dghdpi(v)
+end function
+
+function dghdpia(v as float) as float
+    return AppDimens().dghdpia(v)
+end function
+
+function dghsp(v as float) as float
+    return AppDimens().dghsp(v)
+end function
+
+function dghspa(v as float) as float
+    return AppDimens().dghspa(v)
+end function
+
+function dghspi(v as float) as float
+    return AppDimens().dghspi(v)
+end function
+
+function dghspia(v as float) as float
+    return AppDimens().dghspia(v)
+end function
+
+function dghem(v as float) as float
+    return AppDimens().dghem(v)
+end function
+
+function dghema(v as float) as float
+    return AppDimens().dghema(v)
+end function
+
+function dghemi(v as float) as float
+    return AppDimens().dghemi(v)
+end function
+
+function dghemia(v as float) as float
+    return AppDimens().dghemia(v)
+end function
+
+function dgwdp(v as float) as float
+    return AppDimens().dgwdp(v)
+end function
+
+function dgwdpa(v as float) as float
+    return AppDimens().dgwdpa(v)
+end function
+
+function dgwdpi(v as float) as float
+    return AppDimens().dgwdpi(v)
+end function
+
+function dgwdpia(v as float) as float
+    return AppDimens().dgwdpia(v)
+end function
+
+function dgwsp(v as float) as float
+    return AppDimens().dgwsp(v)
+end function
+
+function dgwspa(v as float) as float
+    return AppDimens().dgwspa(v)
+end function
+
+function dgwspi(v as float) as float
+    return AppDimens().dgwspi(v)
+end function
+
+function dgwspia(v as float) as float
+    return AppDimens().dgwspia(v)
+end function
+
+function dgwem(v as float) as float
+    return AppDimens().dgwem(v)
+end function
+
+function dgwema(v as float) as float
+    return AppDimens().dgwema(v)
+end function
+
+function dgwemi(v as float) as float
+    return AppDimens().dgwemi(v)
+end function
+
+function dgwemia(v as float) as float
+    return AppDimens().dgwemia(v)
+end function
+
+function prsdp(v as float) as float
+    return AppDimens().prsdp(v)
+end function
+
+function prsdpa(v as float) as float
+    return AppDimens().prsdpa(v)
+end function
+
+function prsdpi(v as float) as float
+    return AppDimens().prsdpi(v)
+end function
+
+function prsdpia(v as float) as float
+    return AppDimens().prsdpia(v)
+end function
+
+function prssp(v as float) as float
+    return AppDimens().prssp(v)
+end function
+
+function prsspa(v as float) as float
+    return AppDimens().prsspa(v)
+end function
+
+function prsspi(v as float) as float
+    return AppDimens().prsspi(v)
+end function
+
+function prsspia(v as float) as float
+    return AppDimens().prsspia(v)
+end function
+
+function prsem(v as float) as float
+    return AppDimens().prsem(v)
+end function
+
+function prsema(v as float) as float
+    return AppDimens().prsema(v)
+end function
+
+function prsemi(v as float) as float
+    return AppDimens().prsemi(v)
+end function
+
+function prsemia(v as float) as float
+    return AppDimens().prsemia(v)
+end function
+
+function prhdp(v as float) as float
+    return AppDimens().prhdp(v)
+end function
+
+function prhdpa(v as float) as float
+    return AppDimens().prhdpa(v)
+end function
+
+function prhdpi(v as float) as float
+    return AppDimens().prhdpi(v)
+end function
+
+function prhdpia(v as float) as float
+    return AppDimens().prhdpia(v)
+end function
+
+function prhsp(v as float) as float
+    return AppDimens().prhsp(v)
+end function
+
+function prhspa(v as float) as float
+    return AppDimens().prhspa(v)
+end function
+
+function prhspi(v as float) as float
+    return AppDimens().prhspi(v)
+end function
+
+function prhspia(v as float) as float
+    return AppDimens().prhspia(v)
+end function
+
+function prhem(v as float) as float
+    return AppDimens().prhem(v)
+end function
+
+function prhema(v as float) as float
+    return AppDimens().prhema(v)
+end function
+
+function prhemi(v as float) as float
+    return AppDimens().prhemi(v)
+end function
+
+function prhemia(v as float) as float
+    return AppDimens().prhemia(v)
+end function
+
+function prwdp(v as float) as float
+    return AppDimens().prwdp(v)
+end function
+
+function prwdpa(v as float) as float
+    return AppDimens().prwdpa(v)
+end function
+
+function prwdpi(v as float) as float
+    return AppDimens().prwdpi(v)
+end function
+
+function prwdpia(v as float) as float
+    return AppDimens().prwdpia(v)
+end function
+
+function prwsp(v as float) as float
+    return AppDimens().prwsp(v)
+end function
+
+function prwspa(v as float) as float
+    return AppDimens().prwspa(v)
+end function
+
+function prwspi(v as float) as float
+    return AppDimens().prwspi(v)
+end function
+
+function prwspia(v as float) as float
+    return AppDimens().prwspia(v)
+end function
+
+function prwem(v as float) as float
+    return AppDimens().prwem(v)
+end function
+
+function prwema(v as float) as float
+    return AppDimens().prwema(v)
+end function
+
+function prwemi(v as float) as float
+    return AppDimens().prwemi(v)
+end function
+
+function prwemia(v as float) as float
+    return AppDimens().prwemia(v)
+end function
+
+function ftsdp(v as float) as float
+    return AppDimens().ftsdp(v)
+end function
+
+function ftsdpa(v as float) as float
+    return AppDimens().ftsdpa(v)
+end function
+
+function ftsdpi(v as float) as float
+    return AppDimens().ftsdpi(v)
+end function
+
+function ftsdpia(v as float) as float
+    return AppDimens().ftsdpia(v)
+end function
+
+function ftssp(v as float) as float
+    return AppDimens().ftssp(v)
+end function
+
+function ftsspa(v as float) as float
+    return AppDimens().ftsspa(v)
+end function
+
+function ftsspi(v as float) as float
+    return AppDimens().ftsspi(v)
+end function
+
+function ftsspia(v as float) as float
+    return AppDimens().ftsspia(v)
+end function
+
+function ftsem(v as float) as float
+    return AppDimens().ftsem(v)
+end function
+
+function ftsema(v as float) as float
+    return AppDimens().ftsema(v)
+end function
+
+function ftsemi(v as float) as float
+    return AppDimens().ftsemi(v)
+end function
+
+function ftsemia(v as float) as float
+    return AppDimens().ftsemia(v)
+end function
+
+function fthdp(v as float) as float
+    return AppDimens().fthdp(v)
+end function
+
+function fthdpa(v as float) as float
+    return AppDimens().fthdpa(v)
+end function
+
+function fthdpi(v as float) as float
+    return AppDimens().fthdpi(v)
+end function
+
+function fthdpia(v as float) as float
+    return AppDimens().fthdpia(v)
+end function
+
+function fthsp(v as float) as float
+    return AppDimens().fthsp(v)
+end function
+
+function fthspa(v as float) as float
+    return AppDimens().fthspa(v)
+end function
+
+function fthspi(v as float) as float
+    return AppDimens().fthspi(v)
+end function
+
+function fthspia(v as float) as float
+    return AppDimens().fthspia(v)
+end function
+
+function fthem(v as float) as float
+    return AppDimens().fthem(v)
+end function
+
+function fthema(v as float) as float
+    return AppDimens().fthema(v)
+end function
+
+function fthemi(v as float) as float
+    return AppDimens().fthemi(v)
+end function
+
+function fthemia(v as float) as float
+    return AppDimens().fthemia(v)
+end function
+
+function ftwdp(v as float) as float
+    return AppDimens().ftwdp(v)
+end function
+
+function ftwdpa(v as float) as float
+    return AppDimens().ftwdpa(v)
+end function
+
+function ftwdpi(v as float) as float
+    return AppDimens().ftwdpi(v)
+end function
+
+function ftwdpia(v as float) as float
+    return AppDimens().ftwdpia(v)
+end function
+
+function ftwsp(v as float) as float
+    return AppDimens().ftwsp(v)
+end function
+
+function ftwspa(v as float) as float
+    return AppDimens().ftwspa(v)
+end function
+
+function ftwspi(v as float) as float
+    return AppDimens().ftwspi(v)
+end function
+
+function ftwspia(v as float) as float
+    return AppDimens().ftwspia(v)
+end function
+
+function ftwem(v as float) as float
+    return AppDimens().ftwem(v)
+end function
+
+function ftwema(v as float) as float
+    return AppDimens().ftwema(v)
+end function
+
+function ftwemi(v as float) as float
+    return AppDimens().ftwemi(v)
+end function
+
+function ftwemia(v as float) as float
+    return AppDimens().ftwemia(v)
+end function
+
+function flsdp(v as float) as float
+    return AppDimens().flsdp(v)
+end function
+
+function flsdpa(v as float) as float
+    return AppDimens().flsdpa(v)
+end function
+
+function flsdpi(v as float) as float
+    return AppDimens().flsdpi(v)
+end function
+
+function flsdpia(v as float) as float
+    return AppDimens().flsdpia(v)
+end function
+
+function flssp(v as float) as float
+    return AppDimens().flssp(v)
+end function
+
+function flsspa(v as float) as float
+    return AppDimens().flsspa(v)
+end function
+
+function flsspi(v as float) as float
+    return AppDimens().flsspi(v)
+end function
+
+function flsspia(v as float) as float
+    return AppDimens().flsspia(v)
+end function
+
+function flsem(v as float) as float
+    return AppDimens().flsem(v)
+end function
+
+function flsema(v as float) as float
+    return AppDimens().flsema(v)
+end function
+
+function flsemi(v as float) as float
+    return AppDimens().flsemi(v)
+end function
+
+function flsemia(v as float) as float
+    return AppDimens().flsemia(v)
+end function
+
+function flhdp(v as float) as float
+    return AppDimens().flhdp(v)
+end function
+
+function flhdpa(v as float) as float
+    return AppDimens().flhdpa(v)
+end function
+
+function flhdpi(v as float) as float
+    return AppDimens().flhdpi(v)
+end function
+
+function flhdpia(v as float) as float
+    return AppDimens().flhdpia(v)
+end function
+
+function flhsp(v as float) as float
+    return AppDimens().flhsp(v)
+end function
+
+function flhspa(v as float) as float
+    return AppDimens().flhspa(v)
+end function
+
+function flhspi(v as float) as float
+    return AppDimens().flhspi(v)
+end function
+
+function flhspia(v as float) as float
+    return AppDimens().flhspia(v)
+end function
+
+function flhem(v as float) as float
+    return AppDimens().flhem(v)
+end function
+
+function flhema(v as float) as float
+    return AppDimens().flhema(v)
+end function
+
+function flhemi(v as float) as float
+    return AppDimens().flhemi(v)
+end function
+
+function flhemia(v as float) as float
+    return AppDimens().flhemia(v)
+end function
+
+function flwdp(v as float) as float
+    return AppDimens().flwdp(v)
+end function
+
+function flwdpa(v as float) as float
+    return AppDimens().flwdpa(v)
+end function
+
+function flwdpi(v as float) as float
+    return AppDimens().flwdpi(v)
+end function
+
+function flwdpia(v as float) as float
+    return AppDimens().flwdpia(v)
+end function
+
+function flwsp(v as float) as float
+    return AppDimens().flwsp(v)
+end function
+
+function flwspa(v as float) as float
+    return AppDimens().flwspa(v)
+end function
+
+function flwspi(v as float) as float
+    return AppDimens().flwspi(v)
+end function
+
+function flwspia(v as float) as float
+    return AppDimens().flwspia(v)
+end function
+
+function flwem(v as float) as float
+    return AppDimens().flwem(v)
+end function
+
+function flwema(v as float) as float
+    return AppDimens().flwema(v)
+end function
+
+function flwemi(v as float) as float
+    return AppDimens().flwemi(v)
+end function
+
+function flwemia(v as float) as float
+    return AppDimens().flwemia(v)
+end function
+
+function dsdp(v as float) as float
+    return AppDimens().dsdp(v)
+end function
+
+function dsdpa(v as float) as float
+    return AppDimens().dsdpa(v)
+end function
+
+function dsdpi(v as float) as float
+    return AppDimens().dsdpi(v)
+end function
+
+function dsdpia(v as float) as float
+    return AppDimens().dsdpia(v)
+end function
+
+function dssp(v as float) as float
+    return AppDimens().dssp(v)
+end function
+
+function dsspa(v as float) as float
+    return AppDimens().dsspa(v)
+end function
+
+function dsspi(v as float) as float
+    return AppDimens().dsspi(v)
+end function
+
+function dsspia(v as float) as float
+    return AppDimens().dsspia(v)
+end function
+
+function dsem(v as float) as float
+    return AppDimens().dsem(v)
+end function
+
+function dsema(v as float) as float
+    return AppDimens().dsema(v)
+end function
+
+function dsemi(v as float) as float
+    return AppDimens().dsemi(v)
+end function
+
+function dsemia(v as float) as float
+    return AppDimens().dsemia(v)
+end function
+
+function dhdp(v as float) as float
+    return AppDimens().dhdp(v)
+end function
+
+function dhdpa(v as float) as float
+    return AppDimens().dhdpa(v)
+end function
+
+function dhdpi(v as float) as float
+    return AppDimens().dhdpi(v)
+end function
+
+function dhdpia(v as float) as float
+    return AppDimens().dhdpia(v)
+end function
+
+function dhsp(v as float) as float
+    return AppDimens().dhsp(v)
+end function
+
+function dhspa(v as float) as float
+    return AppDimens().dhspa(v)
+end function
+
+function dhspi(v as float) as float
+    return AppDimens().dhspi(v)
+end function
+
+function dhspia(v as float) as float
+    return AppDimens().dhspia(v)
+end function
+
+function dhem(v as float) as float
+    return AppDimens().dhem(v)
+end function
+
+function dhema(v as float) as float
+    return AppDimens().dhema(v)
+end function
+
+function dhemi(v as float) as float
+    return AppDimens().dhemi(v)
+end function
+
+function dhemia(v as float) as float
+    return AppDimens().dhemia(v)
+end function
+
+function dwdp(v as float) as float
+    return AppDimens().dwdp(v)
+end function
+
+function dwdpa(v as float) as float
+    return AppDimens().dwdpa(v)
+end function
+
+function dwdpi(v as float) as float
+    return AppDimens().dwdpi(v)
+end function
+
+function dwdpia(v as float) as float
+    return AppDimens().dwdpia(v)
+end function
+
+function dwsp(v as float) as float
+    return AppDimens().dwsp(v)
+end function
+
+function dwspa(v as float) as float
+    return AppDimens().dwspa(v)
+end function
+
+function dwspi(v as float) as float
+    return AppDimens().dwspi(v)
+end function
+
+function dwspia(v as float) as float
+    return AppDimens().dwspia(v)
+end function
+
+function dwem(v as float) as float
+    return AppDimens().dwem(v)
+end function
+
+function dwema(v as float) as float
+    return AppDimens().dwema(v)
+end function
+
+function dwemi(v as float) as float
+    return AppDimens().dwemi(v)
+end function
+
+function dwemia(v as float) as float
+    return AppDimens().dwemia(v)
+end function

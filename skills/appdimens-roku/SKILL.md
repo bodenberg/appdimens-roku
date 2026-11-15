@@ -16,7 +16,7 @@ coordinates. Never hard-code a scale such as `* 0.6667` for HD.
 1. Copy `source/AppDimens.brs` and `source/AppDimensTokens.brs` (and `AppDimensCustom.brs` for custom
    strategies) into the channel's `source/`; add both `<script>` tags to every component that sizes nodes.
 2. In each component `init()`: `ad = AppDimens()` (one per BrightScript context; Tasks too).
-3. Layout: `node.width = ad.sdp(720)`, `node.translation = ad.xy(96, 54)`; text: `font.size = ad.fontSize(32)`;
+3. Layout: `node.width = sdp(720)` (global tokens, like `sdp(16)` on the Web; or `ad.sdp(720)`), `node.translation = ad.xy(96, 54)`; text: `font.size = ad.fontSize(32)`;
    long text: `ad.fontSize(28, "logarithmic")`; cover art: `flsdp`, whole art: `ftsdp`.
 4. Keep focusable content inside `ad.safeRect("action")`, titles inside `ad.safeRect("title")`.
 5. A design shared with Android TV/mobile in dp: `AppDimens({ mode: "tv" })` and `ad.px(ad.sdp(v))` /
@@ -25,8 +25,8 @@ coordinates. Never hard-code a scale such as `* 0.6667` for HD.
 ## Custom strategies
 
 Only when the project declares `customStrategies` (or the user asks for their own rule):
-`AppDimens_LoadStrategies(text)` once per component, `ad = AppDimens_Custom()`, then `ad.cdp(16, "id")`,
-`ad.csp(14, "id")`; one-off math: `ad.cdp(64, "base * pow(sw / 360, 0.8)")`. Never invent ids.
+`AppDimens_LoadStrategies(text)` once per component, then `cdp(16, "id")`, `csp(14, "id")` (or `"16cdp-id"` in
+`ad.dimen`); one-off math: `cdp(64, "base * pow(sw / 360, 0.8)")`. Never invent ids.
 
 ## Don'ts
 

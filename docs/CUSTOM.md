@@ -7,7 +7,8 @@ Games. `tests/source/TestCustom.brs` reproduces the shared 540-case fixture gene
 ```brightscript
 err = AppDimens_LoadStrategies(ReadAsciiFile("pkg:/config/custom-strategies.json"))  ' "" or the error
 ad = AppDimens_Custom()                       ' AppDimens() + cdp / csp / cfactor / cresolve
-pad = ad.cdp(16, "brand")                     ' id, strategy object or text formula
+pad = cdp(16, "brand")                        ' global (like cdp(16, s) on the Web); or ad.cdp(16, "brand")
+gap = ad.dimen("16cdp-brand")                 ' literal form (like webdimens)
 txt = ad.csp(14, "readableText")              ' text, the strategy's font-scale policy applied
 hud = ad.cdp(64, "base * pow(sw / 360, 0.8)") ' parsed once, shared per text
 
