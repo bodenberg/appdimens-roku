@@ -17,9 +17,10 @@ Fields: `width`, `height`, `sw` (dp), `density`, `fontScale`, `isLandscape`, `su
 
 | Method | Result |
 |---|---|
+| `sdp(v)`, `asdpa(v)` … 432 global functions | the same tokens over `AppDimens()` (like `sdp(16)` on the Web) |
 | `ad.sdp(v)` … 432 methods | `<prefix><s|h|w><dp|sp|em>[a|i|ia]`; `sp` × font scale |
 | `ad.resolve(token, v)` | any token (inverters `Ph Lh Pw Lw`, `Px`); `invalid` when unknown |
-| `ad.dimen("16asdp")` | `"<number><token>"`, also `dp`, `px`, `spaceW`, `spaceH`, `spaceSw`; `invalid` when malformed |
+| `ad.dimen("16asdp")` | `"<number><token>"`, also `dp`, `px`, `spaceW`, `spaceH`, `spaceSw`, custom `16cdp-brand` / `14csp-brand`; `invalid` when malformed |
 | `ad.dp(strategy, v, slot)` / `ad.sp(…)` | by strategy index or name and slot (`variant * 4 + flags`) |
 | `ad.factor(strategy, slot)` | the factor itself |
 | `ad.px(v)` | dp → coordinates (identity in reference mode) |

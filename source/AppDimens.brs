@@ -7,6 +7,7 @@
 '   label.translation = [ad.sdp(96), ad.sdp(54)]
 '   font.size = ad.fontSize(32)       ' integer, never below 1
 '   ad.resolve("asdpa", 24) : ad.dimen("16hdpLw")
+'   card.width = sdp(720)            ' global token functions (like sdp(16) on the Web): sdp, asdp, ssp …
 '
 ' Include in components: <script type="text/brightscript" uri="pkg:/source/AppDimens.brs" />
 '                         <script type="text/brightscript" uri="pkg:/source/AppDimensTokens.brs" />
@@ -507,6 +508,12 @@ function AppDimens__MDimen(expr as string) as dynamic
     if tok = "spaceW" then return v * 0.01 * m.width
     if tok = "spaceH" then return v * 0.01 * m.height
     if tok = "spaceSw" then return v * 0.01 * m.sw
+    ' custom strategies (AppDimensCustom.brs): "16cdp-brand", "14csp-readableText" — like webdimens
+    if Left(tok, 4) = "cdp-" or Left(tok, 4) = "csp-" then
+        if m.cdp = invalid then return invalid
+        if Left(tok, 1) = "c" and Mid(tok, 2, 1) = "s" then return m.csp(v, Mid(tok, 5))
+        return m.cdp(v, Mid(tok, 5))
+    end if
     return m.resolve(tok, v)
 end function
 

@@ -8,6 +8,8 @@
 '   pad = ad.cdp(16, "brand")                        ' value through a registered strategy
 '   txt = ad.csp(14, "readableText")                 ' text, font-scale policy applied
 '   hud = ad.cdp(64, "base * pow(sw / 360, 0.8)")    ' a text formula (parsed once, shared)
+'   pad = cdp(16, "brand") : txt = csp(14, "brand")   ' global functions, like cdp(16, s) on the Web
+'   ad.dimen("16cdp-brand")                           ' literal form
 '   AppDimens_CustomFactor("product", function(s) : return s.width / 360 : end function)
 '
 ' The registry lives in the BrightScript context of the thread (each SceneGraph component has its
@@ -1346,4 +1348,14 @@ end function
 
 function AppDimens__MCfactor(strategy = invalid as dynamic) as float
     return m.cresolve(strategy).factor
+end function
+
+' ── Global functions, the AppDimens way (cdp(16, "brand") / csp(14, "brand") like the Web) ──────────
+' strategy: registered id, built-in / preset id, strategy object or text formula ("base * pow(sw / 360, 0.8)").
+function cdp(v as float, strategy = invalid as dynamic) as float
+    return AppDimens_Custom().cdp(v, strategy)
+end function
+
+function csp(v as float, strategy = invalid as dynamic) as float
+    return AppDimens_Custom().csp(v, strategy)
 end function

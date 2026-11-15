@@ -41,8 +41,8 @@ sub init()
 
     card = m.top.findNode("card")
     card.translation = [safe.x, safe.y]
-    card.width = ad.sdp(720)                 ' px on your 1920×1080 mock-up → coordinates now
-    card.height = ad.sdp(360)
+    card.width = sdp(720)                    ' px on your 1920×1080 mock-up → coordinates now
+    card.height = sdp(360)                   ' global tokens, like sdp(16) on the Web (or ad.sdp(360))
 
     font = CreateObject("roSGNode", "Font")
     font.uri = "font:MediumBoldSystemFontFile"
@@ -76,7 +76,8 @@ label.translation = [ad.px(ad.sdp(48)), ad.resolve("sdpPx", 27)]
 
 ## Tokens
 
-`<prefix><s|h|w><dp|sp|em>[a|i|ia]` as methods, the full grammar (`Ph`/`Lh`/`Pw`/`Lw` inverters, `Px`) through
+`<prefix><s|h|w><dp|sp|em>[a|i|ia]` as global functions — `sdp(16)`, `asdpa(24)`, `logssp(28)`, the same form as
+`sdp(16)` on the Web and React Native — and as methods (`ad.sdp(16)`), the full grammar (`Ph`/`Lh`/`Pw`/`Lw` inverters, `Px`) through
 `ad.resolve(token, v)` and `ad.dimen("16sdpPxa")`. Prefixes: `""` scaled, `a` auto, `p` percent, `pw` power,
 `f` fluid, `i` interpolated, `log` logarithmic (best for long TV text), `dg` diagonal, `pr` perimeter,
 `ft` fit, `fl` fill, `d` density. More: [docs/GUIDE.md](docs/GUIDE.md).
@@ -87,10 +88,10 @@ Your own rule, with the same JSON document and text formulas as every AppDimens 
 
 ```brightscript
 err = AppDimens_LoadStrategies(ReadAsciiFile("pkg:/config/custom-strategies.json"))   ' "" = ok
-ad = AppDimens_Custom()
-pad = ad.cdp(16, "brand")
-txt = ad.csp(14, "readableText")
-hud = ad.cdp(64, "base * pow(sw / 360, 0.8)")
+pad = cdp(16, "brand")                       ' global, like cdp(16, s) on the Web
+txt = csp(14, "readableText")
+hud = cdp(64, "base * pow(sw / 360, 0.8)")   ' a text formula, parsed once
+gap = AppDimens_Custom().dimen("16cdp-brand") ' literal form
 ```
 
 `tvSafe`, `readableText` and the other presets apply their TV rules on Roku (device class `tv`).
@@ -106,13 +107,38 @@ Details: [docs/CUSTOM.md](docs/CUSTOM.md).
   plus the SceneGraph example under `ui_resolutions=fhd` and `hd,fhd`) and validated by the BrighterScript compiler
   (`npx bsc`). `tests/` is also a sideloadable channel for a real device.
 
+<!-- appdimens-family:begin (maintained in bodenberg/appdimens tools/family_block.py) -->
+## 🌍 AppDimens family
+
+Same token names and the same math on every platform — [hub](https://github.com/bodenberg/appdimens) · [AI agent skills](https://github.com/bodenberg/appdimens-skills) · [custom strategies](https://github.com/bodenberg/appdimens/blob/main/DOCS/CUSTOM.md) (one JSON for every platform).
+
+| Platform | Library | Scaled `16` |
+|---|---|---|
+| Android — Jetpack Compose, Views, Java | [appdimens-dynamic](https://github.com/bodenberg/appdimens-dynamic) | `16.sdp` · `16.sdp(context)` |
+| Android — XML resources | [appdimens-sdps](https://github.com/bodenberg/appdimens-sdps) | `@dimen/_16sdp` |
+| Android — XML text sizes | [appdimens-ssps](https://github.com/bodenberg/appdimens-ssps) | `@dimen/_16ssp` |
+| Kotlin / Compose Multiplatform | [appdimens-kmp](https://github.com/bodenberg/appdimens-kmp) | `16.sdp` |
+| iOS · macOS — SwiftUI, UIKit, AppKit, Metal | [appdimens-ios](https://github.com/bodenberg/appdimens-ios) | `16.sdp` |
+| Flutter | [appdimens-flutter](https://github.com/bodenberg/appdimens-flutter) | `16.sdp` |
+| React Native / Expo | [appdimens-react-native](https://github.com/bodenberg/appdimens-react-native) | `sdp(16)` |
+| Web — HTML/CSS, React, Vue, Svelte, Angular | [appdimens-web](https://github.com/bodenberg/appdimens-web) | `sdp(16)` · `16sdp` |
+| .NET — MAUI, WPF, WinForms, WinUI, Android | [appdimens-net-binding](https://github.com/bodenberg/appdimens-net-binding) | `16.Sdp()` · `{sdp:16}` |
+| Qt 5/6 — QML, Widgets | [appdimens-qt](https://github.com/bodenberg/appdimens-qt) | `AppDimens.sdp(16)` · `16_sdp` |
+| GTK 3/4 and portable C99 | [appdimens-gtk](https://github.com/bodenberg/appdimens-gtk) | `16sdp` (CSS) · `ad_sdp(&m, 16)` |
+| LVGL 8/9 — MCUs, embedded Linux | [appdimens-lvgl](https://github.com/bodenberg/appdimens-lvgl) | `lv_ad_sdp(16)` |
+| Roku — BrightScript / SceneGraph | **appdimens-roku** (this repository) | `sdp(16)` · `ad.sdp(16)` |
+| Python — Tkinter, Qt, Kivy, pygame, Blender | [appdimens-py](https://github.com/bodenberg/appdimens-py) | `ad.sdp(16)` |
+| Games — Unity, Unreal, Godot, C/C++, .NET, Android | [appdimens-games](https://github.com/bodenberg/appdimens-games) | `64f.ASdp()` · `AppDimens.asdp(64)` · `appdimens::asdp(64)` |
+
+<!-- appdimens-family:end -->
+
 ## 🇧🇷 Resumo em português
 
 AppDimens para Roku (BrightScript/SceneGraph): copie `source/AppDimens.brs` e `source/AppDimensTokens.brs` para o seu
-canal, chame `ad = AppDimens()` e use `ad.sdp(96)`, `ad.fontSize(32)`, `ad.safeRect("title")`, `ad.resolve("asdpa", 24)`.
+canal e use `sdp(96)` (funções globais, como `sdp(16)` na Web) ou `ad = AppDimens()` → `ad.sdp(96)`, `ad.fontSize(32)`, `ad.safeRect("title")`, `ad.resolve("asdpa", 24)`.
 O modo `"reference"` (padrão) recebe px do mock-up em 1920×1080 e devolve coordenadas, respeitando o
 `ui_resolutions` do manifest; o modo `"tv"` usa o espaço dp do Android TV (960×540) para compartilhar tokens.
-Estratégias custom (`AppDimensCustom.brs`) usam o mesmo JSON e fórmulas das outras plataformas. Testado com
+Estratégias custom (`AppDimensCustom.brs`): `cdp(16, "brand")`, `csp(14, "brand")`, `"16cdp-brand"` — mesmo JSON e fórmulas das outras plataformas. Testado com
 brs-engine e validado com o compilador BrighterScript.
 
 ## Author
